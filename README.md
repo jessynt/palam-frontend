@@ -1,6 +1,6 @@
 # palam-frontend
 
-> Palam is a powerful blog platform
+> Palam is a powerful blog platform [Demo](https://jessynt.github.io)
 
 ## Build Setup
 
