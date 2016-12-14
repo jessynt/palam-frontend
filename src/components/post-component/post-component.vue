@@ -9,7 +9,7 @@
         <div class="article-top-meta">
             <span class="posted-on">
                 <time class="entry-date published" v-bind:datetime="post.created_at">
-                    {{ post.created_at | formatDate }}
+                    {{ post.created_date}}
                 </time>
                 </a>
             </span>
