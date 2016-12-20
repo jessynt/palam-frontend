@@ -23,7 +23,7 @@
             <div class="article-meta pull-left">
                 <span class="post-categories">
                   <svg class="icon" aria-hidden="true">
-                      <use xlink:href="#icon-tvlivecategoryu1"></use>
+                      <use xlink:href="#icon-cshy-classify-fill"></use>
                   </svg>
                     <router-link :to="{name: 'category', params: {categoryName: post.category.data.name}}">{{ post.category.data.name }}</router-link>
                 </span>

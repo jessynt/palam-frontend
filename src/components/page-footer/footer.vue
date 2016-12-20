@@ -1,8 +1,10 @@
 <template>
     <footer>
         <p class="site-info">
-            Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank" rel="noopener">Hacker</a>
-            © 2016 Jessynt
+            Powered by <a href="https://github.com/jessynt/palam" target="_blank" rel="noopener">Palam</a> and theme by
+            <a href="https://github.com/CodeDaraW/Hacker" target="_blank" rel="noopener">Hacker</a>
+            <br>
+            © 2016 - Jessynt
         </p>
     </footer>
 </template>
