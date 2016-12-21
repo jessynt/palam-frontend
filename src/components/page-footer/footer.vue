@@ -6,8 +6,43 @@
             <br>
             © 2016 - Jessynt
         </p>
+        <label v-text="$t('lang.switch')"></label>
+        <select v-model="selected" @change="switchLanguage">
+            <option v-for="(value, key) in languages" :value="key" v-text="value"></option>
+        </select>
     </footer>
 </template>
+<script>
+    import Vue from 'vue'
+    import setLocale from '../../i18n'
+    import {languages} from '../../i18n/locales'
+    import Cookie from 'js-cookie'
+
+    export default  {
+        data(){
+            return {
+                languages,
+                selected: ''
+            }
+        },
+        computed: {
+            active () {
+                return Vue.config.lang;
+            }
+        },
+        methods: {
+            switchLanguage(){
+                setLocale(this.selected);
+                Cookie.set('lang', this.selected);
+                // Scroll to the top
+                window.scrollTo(0, 0)
+            }
+        },
+        created () {
+            this.selected = this.active;
+        }
+    };
+</script>
 <style lang="scss" rel="stylesheet/scss">
     footer {
         position: relative;
@@ -25,7 +60,3 @@
         }
     }
 </style>
-<script>
-    import Vue from 'vue';
-    export default Vue.component('page-footer', {});
-</script>

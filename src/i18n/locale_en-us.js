@@ -8,6 +8,9 @@ const enUS = {
     pagination: {
         prev: 'Previous',
         next: 'Next'
+    },
+    lang: {
+        switch: 'Language:'
     }
 };
 
