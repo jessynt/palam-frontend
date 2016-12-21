@@ -9,5 +9,5 @@ Object.keys(locales).forEach(lang => {
 });
 
 export default function setLocale (locale) {
-    Vue.config.lang = locale
+    Vue.config.lang = locale;
 }
