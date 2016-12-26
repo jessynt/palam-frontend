@@ -40,7 +40,15 @@
 <script>
     export default{
         name: 'post',
-        props: ['post', 'index']
+        props: ['post', 'index'],
+        mounted(){
+            this.$el.querySelector('.article-content').querySelectorAll('a').forEach((el) => {
+                if (el.host !== window.location.host) {
+                    el.setAttribute('target', '_blank');
+                    el.setAttribute('rel', 'noopener');
+                }
+            });
+        }
     }
 </script>
 <style lang="scss" rel="stylesheet/scss">
