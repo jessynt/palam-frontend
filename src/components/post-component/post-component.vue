@@ -14,7 +14,7 @@
                 </a>
             </span>
         </div>
-        <div class="article-content">
+        <div class="article-content wysiwyg">
             <div class="entry" v-html="post.description" v-if="post.description && index" v-highlightjs></div>
             <div class="entry" v-html="post.body" v-else v-highlightjs></div>
         </div>
@@ -37,7 +37,23 @@
         </div>
     </article>
 </template>
+<script>
+    export default{
+        name: 'post',
+        props: ['post', 'index'],
+        mounted(){
+            this.$el.querySelector('.article-content').querySelectorAll('a').forEach((el) => {
+                if (el.host !== window.location.host) {
+                    el.setAttribute('target', '_blank');
+                    el.setAttribute('rel', 'noopener');
+                }
+            });
+        }
+    }
+</script>
 <style lang="scss" rel="stylesheet/scss">
+    @import '../../sass/wysiwyg.sass';
+
     article {
         $hackerRed: #f03838;
         $hackerGray: #9e9e9e;
@@ -108,15 +124,11 @@
                 }
             }
         }
-        .article-excerpt, .article-content, .featured-media {
-            margin: 4rem 0;
+        .article-excerpt, .article-content {
+            color: #333;
             font-size: 1.6rem;
-            color: $articleTextColor;
-            img {
-                max-width: 100%;
-                height: auto;
-                margin: 1rem auto;
-            }
+            font-family: -apple-system, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+            margin: 4rem 0;
         }
         .article-footer {
             .pull-left {
@@ -189,9 +201,3 @@
         }
     }
 </style>
-<script>
-    export default{
-        name: 'post',
-        props: ['post', 'index']
-    }
-</script>
