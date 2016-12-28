@@ -11,6 +11,8 @@ import markdown from 'highlight.js/lib/languages/markdown';
 import dockerfile from 'highlight.js/lib/languages/dockerfile';
 import makefile from 'highlight.js/lib/languages/makefile';
 import swift from 'highlight.js/lib/languages/swift';
+import scss from 'highlight.js/lib/languages/scss';
+import less from 'highlight.js/lib/languages/less';
 
 hljs.registerLanguage('accesslog', accesslog);
 hljs.registerLanguage('bash', bash);
@@ -24,5 +26,7 @@ hljs.registerLanguage('markdown', markdown);
 hljs.registerLanguage('dockerfile', dockerfile);
 hljs.registerLanguage('makefile', makefile);
 hljs.registerLanguage('swift', swift);
+hljs.registerLanguage('scss', scss);
+hljs.registerLanguage('less', less);
 
 export default hljs

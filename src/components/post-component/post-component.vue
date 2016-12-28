@@ -42,12 +42,14 @@
         name: 'post',
         props: ['post', 'index'],
         mounted(){
-            this.$el.querySelector('.article-content').querySelectorAll('a').forEach((el) => {
-                if (el.host !== window.location.host) {
-                    el.setAttribute('target', '_blank');
-                    el.setAttribute('rel', 'noopener');
+            let anchors = this.$el.querySelector('.article-content').getElementsByTagName('a');
+            let host = location.host;
+            for (let i = 0; i < anchors.length; ++i) {
+                if (anchors[i].host !== host && anchors[i].host !== '') {
+                    anchors[i].setAttribute('target', '_blank');
+                    anchors[i].setAttribute('rel', 'noopener');
                 }
-            });
+            }
         }
     }
 </script>

@@ -208,11 +208,8 @@ $visited-links: false !default
     pre
         -moz-osx-font-smoothing: auto
         -webkit-font-smoothing: auto
-        background-color: $background-code
-        color: $text
         font-size: 0.9em
-        @if $custom-fonts
-            font-family: $family-code
+        font-family: Menlo,Monaco,Consolas,"Courier New",monospace
     code,
     kbd,
     samp
@@ -220,15 +217,12 @@ $visited-links: false !default
         line-height: $line-height / 0.9
         padding: 0.1em 0.4em 0.2em
         vertical-align: baseline
-        @if $custom-colors
-            color: $text-code
     pre
         overflow: auto
         padding: 1em 1.2em
         code
-            background: none
             font-size: 1em
-            line-height: 1em
+            line-height: 1.3em
     // Figure
     figure
         margin-bottom: $margin * 2
