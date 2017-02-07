@@ -4,7 +4,7 @@
             Powered by <a href="https://github.com/jessynt/palam" target="_blank" rel="noopener">Palam</a> and theme by
             <a href="https://github.com/CodeDaraW/Hacker" target="_blank" rel="noopener">Hacker</a>
             <br>
-            © 2016 - Jessynt
+            © 2016 - 2017 - Jessynt
         </p>
         <label v-text="$t('lang.switch')"></label>
         <select v-model="selected" @change="switchLanguage">
