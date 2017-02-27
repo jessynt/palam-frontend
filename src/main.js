@@ -11,7 +11,6 @@ import Cookie from 'js-cookie'
 import './components'
 // icon
 import 'assets/js/iconfont'
-
 filter(Vue);
 
 //TODO: Refactor

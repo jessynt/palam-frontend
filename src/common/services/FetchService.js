@@ -1,3 +1,4 @@
+import {API_URL} from "../../config";
 export const generatorUrl = (url = '', params = '') =>
     params ? url + '?' + generatorQueryString(params) : url;
 
@@ -16,7 +17,7 @@ export const statusHandler = response => {
 
 export const parseAsJson = response => response.json();
 
-const httpFetch = (url, options) => fetch(url, options)
+const httpFetch = (url, options) => fetch(API_URL + url, options)
     .then(statusHandler)
     .then(parseAsJson);
 

@@ -1,6 +1,6 @@
 import httpFetch, * as FetchService from './FetchService';
 
-const API_URL = process.env.API_URL + '/api/category';
+const API_URL = '/api/category';
 
 export default class TagService {
     static getCategoryByName(categoryName) {

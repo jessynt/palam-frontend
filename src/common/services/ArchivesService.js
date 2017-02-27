@@ -1,5 +1,5 @@
 import httpFetch, * as FetchService from './FetchService';
-const API_URL = process.env.API_URL + '/api/post/archive';
+const API_URL = '/api/post/archive';
 
 export default class ArchivesService {
     queryArchives() {
