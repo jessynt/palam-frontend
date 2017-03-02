@@ -1,6 +1,6 @@
 import httpFetch, * as FetchService from './FetchService'
 
-const API_URL = process.env.API_URL + '/api/post';
+const API_URL = '/api/post';
 
 export default class PostService {
     static queryPostList({current_page} = {}) {

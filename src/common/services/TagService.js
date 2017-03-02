@@ -1,6 +1,6 @@
 import httpFetch, * as FetchService from './FetchService';
 
-const API_URL = process.env.API_URL + '/api/tag';
+const API_URL = '/api/tag';
 
 export default class TagService {
     getTagByName(TagName) {
